@@ -52,8 +52,8 @@ if ($_POST) {
           </div>
           <br>
           <br>
-           <div class="col-xs-8 powerRateDiv">
-              <input type="number" name="power_rate2" class="form-control powerRate" value="<?php echo $lastLandlordSet['power_rate2']; ?>" placeholder="输入后一个月电费费用">
+           <div class="col-xs-8 powerRateDiv pull-right">
+              <input type="number" name="power_rate2" class="form-control powerRate " value="<?php echo $lastLandlordSet['power_rate2']; ?>" placeholder="输入后一个月电费费用">
           </div>
         </div>
 
@@ -64,7 +64,7 @@ if ($_POST) {
           </div>
           <br>
           <br>
-          <div class="col-xs-8 waterRateDiv">
+          <div class="col-xs-8 waterRateDiv pull-right">
               <input type="number" name="water_rate2" class="form-control waterRate" value="<?php echo $lastLandlordSet['water_rate2']; ?>" placeholder="输入后一个月水费费用">        
           </div>
         </div>
@@ -107,7 +107,7 @@ if ($_POST) {
           </div>
 
           <div class=" col-xs-6">
-            <a type="button" href="total.php" class="btn  btn-default">返回</a>
+            <a type="button" href="index.php" class="btn  btn-default">返回</a>
           </div>  
         </div>
       </form>

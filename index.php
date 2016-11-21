@@ -98,9 +98,9 @@ $lastLandlordSet = getLastLandlordSet();
           </div>
         </div>
         <div class="form-group">
-          <label for="" class="col-xs-4 control-label">煤气费</label>
+          <label for="" class="col-xs-4 control-label">燃气费</label>
           <div class="col-xs-8">
-            <input type="number" class="form-control" id="gasCost" value="<?php echo $lastLandlordSet['gas_cost']; ?>" placeholder="输入煤气费">
+            <input type="number" class="form-control" id="gasCost" value="<?php echo $lastLandlordSet['gas_cost']; ?>" placeholder="输入燃气费">
           </div>
         </div>
         <hr>

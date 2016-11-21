@@ -144,6 +144,14 @@ $lastLandlordSet = getLastLandlordSet();
         return total;
       }
 
+      function getEveryoneWaterRate() {
+        return Number((getTotalWaterRate() / Number($('#peopleNum').val())).toFixed(2));
+      }
+
+      function getEveryonePowerRate() {
+        return Number((getTotalPowerRate() / Number($('#peopleNum').val())).toFixed(2));
+      }
+
       $('#total').click(function() {
         var total = 0;
         var rent = Number($('#rent').val());
@@ -155,9 +163,14 @@ $lastLandlordSet = getLastLandlordSet();
         var gasCost = Number($('#gasCost').val());
         var totalPowerRate = getTotalPowerRate();
         var everyonePropertyCost = getEveryonePropertyCost();
-        total = rent + totalPowerRate + totalWaterRate + everyonePropertyCost + gasCost + netCost;
-        total = total.toFixed(2);
-        alert("本月您应该交 "+total+" 元宿舍费");
+        var everyoneWaterRate = getEveryoneWaterRate();
+        var everyonePowerRate = getEveryonePowerRate();
+        total = rent + everyonePowerRate + everyoneWaterRate + everyonePropertyCost + gasCost + netCost;
+        total = Number(total.toFixed(2));
+        var totalStr = "租   金："+ rent +"\n电   费："+ everyonePowerRate + "\n水   费："+ everyoneWaterRate +"\n物业费："+ everyonePropertyCost + "\n网   费："+ netCost;
+        totalStr = gasCost ? totalStr + "\n燃气费：" + gasCost : totalStr;
+        totalStr += "\n————————————\n总   计：" + total;
+        alert(totalStr);
       });
 
       $('#addPowerRateIpt').click(function() {

@@ -167,9 +167,9 @@ $lastLandlordSet = getLastLandlordSet();
         var everyonePowerRate = getEveryonePowerRate();
         total = rent + everyonePowerRate + everyoneWaterRate + everyonePropertyCost + gasCost + netCost;
         total = Number(total.toFixed(2));
-        var totalStr = "租   金："+ rent +"\n电   费："+ everyonePowerRate + "\n水   费："+ everyoneWaterRate +"\n物业费："+ everyonePropertyCost + "\n网   费："+ netCost;
+        var totalStr = "租　金："+ rent +"\n电　费："+ everyonePowerRate + "\n水　费："+ everyoneWaterRate +"\n物业费："+ everyonePropertyCost + "\n网　费："+ netCost;
         totalStr = gasCost ? totalStr + "\n燃气费：" + gasCost : totalStr;
-        totalStr += "\n————————————\n总   计：" + total;
+        totalStr += "\n————————————\n总　计：" + total;
         alert(totalStr);
       });
 
